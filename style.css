@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Pacifico&family=Patrick+Hand&family=Poppins:wght@200&family=Roboto:ital,wght@0,300;1,300&family=Tangerine&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: url("https://media2.giphy.com/media/TxVVB6PfWMjE4/giphy.gif?cid=ecf05e478n6m9tq8b8xm6uphxbjcl8aqzyl1791vax2x6p1u&rid=giphy.gif&ct=g")
+    center center fixed;
+  overflow-y: hidden;
+}
+#year,
+#day,
+#month {
+  position: absolute;
+}
+#day {
+  animation-name: slideDay;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+  animation-delay: 1s;
+  font-size: 20px;
+  left: 15px;
+  top: -15px;
+}
+@keyframes slideDay {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+#month,
+#year {
+  top: 196px;
+  right: 82px;
+}
+#year {
+  right: 27px;
+}
+#year {
+  animation-name: slide;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+  animation-delay: 1s;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+#clockBox {
+  width: 85vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(0px) saturate(174%);
+  -webkit-backdrop-filter: blur(0px) saturate(174%);
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 9px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  font-size: 35px;
+}
+.moon {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 12%;
+  left: 68%;
+  background-color: rgb(211, 211, 211);
+  border-radius: 100px;
+}
+#year {
+  animation-name: slide;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+  animation-delay: 1s;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+#Astro {
+  width: 70px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation-name: float;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-delay: 1s;
+}
+@keyframes float {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0px);
+  }
+}
+#Rocket {
+  width: 40px;
+  position: absolute;
+  top: -10%;
+  left: 91%;
+  z-index: 10;
+  animation-name: Takeoff;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-delay: 1s;
+}
+@keyframes Takeoff {
+  0% {
+    transform: translatey(800px);
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 0;
+  }
+}
+@media (min-width: 640px) {
+  #clockBox {
+    max-width: 480px;
+  }
+}
